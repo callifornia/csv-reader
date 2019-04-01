@@ -21,7 +21,7 @@ object Main {
 
 
   def main(args: Array[String]): Unit = {
-    Source(readFilesNameFrom(ABSOLUTE_PATH_INTO_DIRECTORY_WITH_FILES))
+    Source(readFilesNameFrom(args(0)))
       .mapAsync(1)(readFromFile(_)
         .filter(withCrimeId)
         .runWith(Sink.seq))
