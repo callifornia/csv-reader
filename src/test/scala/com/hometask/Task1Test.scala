@@ -16,6 +16,10 @@ class Task1Test
   "retry mechanism" should {
 
     "return calculated result on acceptable condition with out using retries attempts" in {
+
+
+
+
       failAfter(Span(2, Seconds)) {
         retry(
           () => 3,
