@@ -15,6 +15,9 @@ object Task1 {
                acceptResult: A => Boolean,
                retries: List[FiniteDuration]): A = {
 
+//    "1.71.0-SNAPSHOT"
+//    1.71.0-SNAPSHOT
+
     (retries, block()) match {
       case (Nil, result) => result
       case (_, result) if acceptResult(result) => result
